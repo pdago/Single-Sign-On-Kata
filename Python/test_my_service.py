@@ -4,7 +4,7 @@ from my_service import *
 
 class MyServiceTest(unittest.TestCase):
     name = 'Earl'
-    token = 'e4r1_t0k3n'
+    token = SSOToken('e4r1_t0k3n')
 
     def test_invalidSSOTokenIsRejected(self):
         SingleSignOnRegistry.is_valid = MagicMock(return_value = False)
